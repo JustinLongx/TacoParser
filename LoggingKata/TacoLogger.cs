@@ -2,7 +2,7 @@
 
 namespace LoggingKata
 {
-    public class TacoLogger : ILog
+    public class TacoLogger : ILog //Any string thats passed into this will write errors to the console.
     {
         public void LogFatal(string log, Exception exception = null)
         {

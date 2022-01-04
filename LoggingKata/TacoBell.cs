@@ -4,6 +4,8 @@ using System.Text;
 
 namespace LoggingKata
 {
+    // Here I created a TacoBell class that conforms to ITrackable.
+    // Forcing each Taco Bell to have a Name and Location.
     class TacoBell : ITrackable
     {
         public TacoBell()
