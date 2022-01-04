@@ -1,8 +1,6 @@
 ﻿namespace LoggingKata
 {
-    /// <summary>
-    /// Parses a POI file to locate all the Taco Bells
-    /// </summary>
+    
     public class TacoParser
     {
         readonly ILog logger = new TacoLogger(); 
@@ -11,7 +9,7 @@
             //taking a string.. and turning it into a taco bell with a name and location.
             //line its passing through will represent every single row in the .CSV file.
         {
-            logger.LogInfo("Begin parsing"); //Will print to console "Begin parsing".
+            logger.LogInfo("Calculating Distance..."); //Will print to console "Calculating Distance...".
 
             // will split up every string when it sees a comma and turn it into an array of strings.
             //{"34.3453", "-84.2345", "Taco Bell Acwort..."} Indexed at {0, 1, 2}

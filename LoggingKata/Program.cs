@@ -36,14 +36,14 @@ namespace LoggingKata
                 logger.LogWarning("file only has one line of input");
             }
 
-            logger.LogInfo($"Lines: {lines[0]}");
+            
 
             // Create a new instance of your TacoParser class
             var parser = new TacoParser(); 
 
             // Grab an IEnumerable of locations using the Select command: var locations = lines.Select(parser.Parse);
             //Select method - (Foreach line in lines, im going to parse lines and store it in locations).
-            //Turns it into an array
+            //Turns it into an array of strings
             //Turns it into an ITrackable by storing it in locations.
             ITrackable[] locations = lines.Select(line => parser.Parse(line)).ToArray();
 
@@ -51,7 +51,7 @@ namespace LoggingKata
 
             // I Created two ITrackable variables with initial values of null.
             // These will be used to store the two taco bells that are the farthest from each other.
-            // Create a `double` variable to store the distance
+            // Created a `double` variable to store the distance
 
             ITrackable tacoBell1 = null;
             ITrackable tacoBell2 = null;
@@ -71,12 +71,12 @@ namespace LoggingKata
 
                 var locA = locations[i]; //Whatever i is equal too will be location a.
 
-                // Created a new corA Coordinate with your locA's lat and long
+                // I Created a new corA Coordinate with my locA's lat and long
                 var corA = new GeoCoordinate();
                 corA.Latitude = locA.Location.Latitude;
                 corA.Longitude = locA.Location.Longitude;
 
-                // Created another loop on the locations with the scope of your first loop, so you can grab the "destination" location.
+                // Created another loop on the locations with the scope of my first loop, so you can grab the "destination" location.
                 for (int j = 0; j < locations.Length; j++)
                 {
                     var locB = locations[j];
